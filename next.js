@@ -110,9 +110,11 @@ function showWeather(d) {
 
 // SEARCH 
 function submit(e) {
-    if (e.key === "Enter") {
+  if(e.target.value.trim() !== "") {
+      if (e.key === "Enter") {
         let city = e.target.value;
         fetchWeatherData(city);
+    }
     }
 }
 
